@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,10 +13,24 @@
 		E83F82B42444E0A60052DB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B32444E0A60052DB21 /* Assets.xcassets */; };
 		E83F82B72444E0A60052DB21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */; };
 		E83F82BA2444E0A60052DB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B82444E0A60052DB21 /* LaunchScreen.storyboard */; };
+		E8A1389024873F870049265A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A1388F24873F870049265A /* GoogleService-Info.plist */; };
+		E8A13893248744D50049265A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E8A13892248744D50049265A /* Lottie */; };
+		E8A138952487484E0049265A /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A138942487484E0049265A /* UserStore.swift */; };
+		E8A1389724874D1C0049265A /* medical.json in Resources */ = {isa = PBXBuildFile; fileRef = E8A1389624874D1C0049265A /* medical.json */; };
+		E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1B2487008D00376261 /* Modifiers.swift */; };
+		E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */; };
+		E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1F24870F3A00376261 /* DefaultCard.swift */; };
+		E8ED9B2224871CE400376261 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B2124871CE400376261 /* LoginView.swift */; };
+		E8ED9B242487257100376261 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B232487257100376261 /* BlurView.swift */; };
+		E8ED9B2E24872F9F00376261 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B2D24872F9F00376261 /* LottieView.swift */; };
+		E8ED9B30248730E300376261 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B2F248730E300376261 /* LoadingView.swift */; };
+		E8ED9B322487326700376261 /* loadingheart.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ED9B312487326600376261 /* loadingheart.json */; };
+		E8ED9B342487350A00376261 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B332487350A00376261 /* SuccessView.swift */; };
+		E8ED9B382487391600376261 /* morningtea.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ED9B372487391600376261 /* morningtea.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E83F82AA2444E0A40052DB21 /* BloodPressure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BloodPressure.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E83F82AA2444E0A40052DB21 /* Health Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83F82AD2444E0A40052DB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E83F82B12444E0A40052DB21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +38,19 @@
 		E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E83F82B92444E0A60052DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E83F82BB2444E0A60052DB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8A1388F24873F870049265A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8A138942487484E0049265A /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		E8A1389624874D1C0049265A /* medical.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medical.json; sourceTree = "<group>"; };
+		E8ED9B1B2487008D00376261 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCard.swift; sourceTree = "<group>"; };
+		E8ED9B1F24870F3A00376261 /* DefaultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCard.swift; sourceTree = "<group>"; };
+		E8ED9B2124871CE400376261 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E8ED9B232487257100376261 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		E8ED9B2D24872F9F00376261 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		E8ED9B2F248730E300376261 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		E8ED9B312487326600376261 /* loadingheart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingheart.json; sourceTree = "<group>"; };
+		E8ED9B332487350A00376261 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		E8ED9B372487391600376261 /* morningtea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = morningtea.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8A13893248744D50049265A /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +68,7 @@
 		E83F82A12444E0A40052DB21 = {
 			isa = PBXGroup;
 			children = (
-				E83F82AC2444E0A40052DB21 /* BloodPressure */,
+				E83F82AC2444E0A40052DB21 /* Health Tracker */,
 				E83F82AB2444E0A40052DB21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,15 +76,19 @@
 		E83F82AB2444E0A40052DB21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E83F82AA2444E0A40052DB21 /* BloodPressure.app */,
+				E83F82AA2444E0A40052DB21 /* Health Tracker.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E83F82AC2444E0A40052DB21 /* BloodPressure */ = {
+		E83F82AC2444E0A40052DB21 /* Health Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				E8ED9B1A2487006A00376261 /* Utilities */,
+				E83F82C12444E2620052DB21 /* CustomView */,
 				E83F82AD2444E0A40052DB21 /* AppDelegate.swift */,
+				E8ED9B2124871CE400376261 /* LoginView.swift */,
+				E8A138942487484E0049265A /* UserStore.swift */,
 				E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */,
 				E83F82B12444E0A40052DB21 /* ContentView.swift */,
 				E83F82B32444E0A60052DB21 /* Assets.xcassets */,
@@ -64,7 +96,7 @@
 				E83F82BB2444E0A60052DB21 /* Info.plist */,
 				E83F82B52444E0A60052DB21 /* Preview Content */,
 			);
-			path = BloodPressure;
+			path = "Health Tracker";
 			sourceTree = "<group>";
 		};
 		E83F82B52444E0A60052DB21 /* Preview Content */ = {
@@ -75,12 +107,45 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		E83F82C12444E2620052DB21 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */,
+				E8ED9B1F24870F3A00376261 /* DefaultCard.swift */,
+				E8ED9B2F248730E300376261 /* LoadingView.swift */,
+				E8ED9B332487350A00376261 /* SuccessView.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		E8ED9B1A2487006A00376261 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1388F24873F870049265A /* GoogleService-Info.plist */,
+				E8ED9B2524872F3000376261 /* Lottie */,
+				E8ED9B1B2487008D00376261 /* Modifiers.swift */,
+				E8ED9B232487257100376261 /* BlurView.swift */,
+				E8ED9B2D24872F9F00376261 /* LottieView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E8ED9B2524872F3000376261 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1389624874D1C0049265A /* medical.json */,
+				E8ED9B372487391600376261 /* morningtea.json */,
+				E8ED9B312487326600376261 /* loadingheart.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E83F82A92444E0A40052DB21 /* BloodPressure */ = {
+		E83F82A92444E0A40052DB21 /* Health Tracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E83F82BE2444E0A60052DB21 /* Build configuration list for PBXNativeTarget "BloodPressure" */;
+			buildConfigurationList = E83F82BE2444E0A60052DB21 /* Build configuration list for PBXNativeTarget "Health Tracker" */;
 			buildPhases = (
 				E83F82A62444E0A40052DB21 /* Sources */,
 				E83F82A72444E0A40052DB21 /* Frameworks */,
@@ -90,9 +155,12 @@
 			);
 			dependencies = (
 			);
-			name = BloodPressure;
+			name = "Health Tracker";
+			packageProductDependencies = (
+				E8A13892248744D50049265A /* Lottie */,
+			);
 			productName = BloodPressure;
-			productReference = E83F82AA2444E0A40052DB21 /* BloodPressure.app */;
+			productReference = E83F82AA2444E0A40052DB21 /* Health Tracker.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E83F82A52444E0A40052DB21 /* Build configuration list for PBXProject "BloodPressure" */;
+			buildConfigurationList = E83F82A52444E0A40052DB21 /* Build configuration list for PBXProject "Health Tracker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,11 +187,14 @@
 				Base,
 			);
 			mainGroup = E83F82A12444E0A40052DB21;
+			packageReferences = (
+				E8A13891248744D50049265A /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = E83F82AB2444E0A40052DB21 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E83F82A92444E0A40052DB21 /* BloodPressure */,
+				E83F82A92444E0A40052DB21 /* Health Tracker */,
 			);
 		};
 /* End PBXProject section */
@@ -133,9 +204,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8ED9B382487391600376261 /* morningtea.json in Resources */,
 				E83F82BA2444E0A60052DB21 /* LaunchScreen.storyboard in Resources */,
 				E83F82B72444E0A60052DB21 /* Preview Assets.xcassets in Resources */,
+				E8ED9B322487326700376261 /* loadingheart.json in Resources */,
+				E8A1389724874D1C0049265A /* medical.json in Resources */,
 				E83F82B42444E0A60052DB21 /* Assets.xcassets in Resources */,
+				E8A1389024873F870049265A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +222,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83F82AE2444E0A40052DB21 /* AppDelegate.swift in Sources */,
+				E8ED9B242487257100376261 /* BlurView.swift in Sources */,
+				E8ED9B2E24872F9F00376261 /* LottieView.swift in Sources */,
+				E8ED9B30248730E300376261 /* LoadingView.swift in Sources */,
+				E8ED9B2224871CE400376261 /* LoginView.swift in Sources */,
+				E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */,
+				E8A138952487484E0049265A /* UserStore.swift in Sources */,
 				E83F82B02444E0A40052DB21 /* SceneDelegate.swift in Sources */,
+				E8ED9B342487350A00376261 /* SuccessView.swift in Sources */,
 				E83F82B22444E0A40052DB21 /* ContentView.swift in Sources */,
+				E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */,
+				E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,15 +369,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BloodPressure/Preview Content\"";
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = AC7SNZV8BM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BloodPressure/Info.plist;
+				INFOPLIST_FILE = "Health Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.rkhdeveloper.BloodPressure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkhdeveloper.HealthTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,15 +390,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"BloodPressure/Preview Content\"";
+				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_ASSET_PATHS = "\"Health Tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = AC7SNZV8BM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BloodPressure/Info.plist;
+				INFOPLIST_FILE = "Health Tracker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.testapp.rkhdeveloper.BloodPressure;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rkhdeveloper.HealthTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E83F82A52444E0A40052DB21 /* Build configuration list for PBXProject "BloodPressure" */ = {
+		E83F82A52444E0A40052DB21 /* Build configuration list for PBXProject "Health Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E83F82BC2444E0A60052DB21 /* Debug */,
@@ -332,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E83F82BE2444E0A60052DB21 /* Build configuration list for PBXNativeTarget "BloodPressure" */ = {
+		E83F82BE2444E0A60052DB21 /* Build configuration list for PBXNativeTarget "Health Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E83F82BF2444E0A60052DB21 /* Debug */,
@@ -342,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E8A13891248744D50049265A /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E8A13892248744D50049265A /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E8A13891248744D50049265A /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E83F82A22444E0A40052DB21 /* Project object */;
 }
