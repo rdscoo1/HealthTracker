@@ -13,12 +13,12 @@ struct SuccessView: View {
     
     var body: some View {
         VStack {
-            Text("Logging you...")
+            Text("Вход...")
                 .font(.title).bold()
                 .opacity(show ? 1 : 0)
                 .animation(Animation.linear(duration: 1).delay(0.2))
             
-            LottieView(filename: "success")
+            LottieView(filename: "healthreport")
                 .frame(width: 300, height: 300)
                 .opacity(show ? 1 : 0)
                 .animation(Animation.linear(duration: 1).delay(0.4))

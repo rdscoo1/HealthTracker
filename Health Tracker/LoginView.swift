@@ -13,7 +13,7 @@ struct LoginView: View {
     @State var password = ""
     @State var isTextFieldFocused = false
     @State var showAlert = false
-    @State var alertMessage = "Something went wrong"
+    @State var alertMessage = LocalizedStringKey("Something went wrong")
     @State var isLoading = false
     @State var isSuccess = false
     
@@ -26,7 +26,7 @@ struct LoginView: View {
             self.isLoading = false
             self.isSuccess = true
             
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
                 self.isSuccess = false
             }
         }
@@ -78,7 +78,7 @@ struct LoginView: View {
                             .padding(.leading)
                         
                         
-                        SecureField("Password", text: $password)
+                        SecureField(LocalizedStringKey("Password"), text: $password)
                             .keyboardType(.default)
                             .font(.subheadline)
                             .padding(.leading)
@@ -97,7 +97,7 @@ struct LoginView: View {
                 .offset(y: 460)
                 
                 HStack {
-                    Text("Forgot password?")
+                    Text(LocalizedStringKey("Forgot password?"))
                         .font(.subheadline)
                     
                     Spacer()
@@ -105,7 +105,7 @@ struct LoginView: View {
                     Button(action: {
                         self.login()
                     }) {
-                        Text("Log in")
+                        Text(LocalizedStringKey("Log in"))
                             .foregroundColor(.black)
                     }
                     .padding(12)
@@ -154,7 +154,7 @@ struct CoverView: View {
                 .frame(width: 300, height: 250)
                 .animation(Animation.linear(duration: 1).delay(0.4))
         
-                Text("Your health\nOur care")
+                Text(LocalizedStringKey("Your health\nOur care"))
                     .font(.system(size: 40, weight: .bold))
                     .frame(maxWidth: 375, maxHeight: 250, alignment: .leading)
                     .padding(.horizontal, 16)
