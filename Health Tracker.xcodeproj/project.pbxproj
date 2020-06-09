@@ -13,10 +13,12 @@
 		E83F82B42444E0A60052DB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B32444E0A60052DB21 /* Assets.xcassets */; };
 		E83F82B72444E0A60052DB21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */; };
 		E83F82BA2444E0A60052DB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B82444E0A60052DB21 /* LaunchScreen.storyboard */; };
+		E8713D2924879DE700F9A62D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8713D2B24879DE700F9A62D /* Localizable.strings */; };
 		E8A1389024873F870049265A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A1388F24873F870049265A /* GoogleService-Info.plist */; };
 		E8A13893248744D50049265A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E8A13892248744D50049265A /* Lottie */; };
 		E8A138952487484E0049265A /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A138942487484E0049265A /* UserStore.swift */; };
 		E8A1389724874D1C0049265A /* medical.json in Resources */ = {isa = PBXBuildFile; fileRef = E8A1389624874D1C0049265A /* medical.json */; };
+		E8BDCBB5248797F900A0E1E4 /* healthreport.json in Resources */ = {isa = PBXBuildFile; fileRef = E8BDCBB4248797F900A0E1E4 /* healthreport.json */; };
 		E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1B2487008D00376261 /* Modifiers.swift */; };
 		E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */; };
 		E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1F24870F3A00376261 /* DefaultCard.swift */; };
@@ -38,9 +40,13 @@
 		E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E83F82B92444E0A60052DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E83F82BB2444E0A60052DB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8713D2824879DB800F9A62D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E8713D2A24879DE700F9A62D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E8713D2C24879ED100F9A62D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E8A1388F24873F870049265A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8A138942487484E0049265A /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		E8A1389624874D1C0049265A /* medical.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medical.json; sourceTree = "<group>"; };
+		E8BDCBB4248797F900A0E1E4 /* healthreport.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthreport.json; sourceTree = "<group>"; };
 		E8ED9B1B2487008D00376261 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCard.swift; sourceTree = "<group>"; };
 		E8ED9B1F24870F3A00376261 /* DefaultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCard.swift; sourceTree = "<group>"; };
@@ -126,6 +132,7 @@
 				E8ED9B1B2487008D00376261 /* Modifiers.swift */,
 				E8ED9B232487257100376261 /* BlurView.swift */,
 				E8ED9B2D24872F9F00376261 /* LottieView.swift */,
+				E8713D2B24879DE700F9A62D /* Localizable.strings */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 		E8ED9B2524872F3000376261 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				E8BDCBB4248797F900A0E1E4 /* healthreport.json */,
 				E8A1389624874D1C0049265A /* medical.json */,
 				E8ED9B372487391600376261 /* morningtea.json */,
 				E8ED9B312487326600376261 /* loadingheart.json */,
@@ -185,6 +193,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = E83F82A12444E0A40052DB21;
 			packageReferences = (
@@ -207,6 +216,8 @@
 				E8ED9B382487391600376261 /* morningtea.json in Resources */,
 				E83F82BA2444E0A60052DB21 /* LaunchScreen.storyboard in Resources */,
 				E83F82B72444E0A60052DB21 /* Preview Assets.xcassets in Resources */,
+				E8BDCBB5248797F900A0E1E4 /* healthreport.json in Resources */,
+				E8713D2924879DE700F9A62D /* Localizable.strings in Resources */,
 				E8ED9B322487326700376261 /* loadingheart.json in Resources */,
 				E8A1389724874D1C0049265A /* medical.json in Resources */,
 				E83F82B42444E0A60052DB21 /* Assets.xcassets in Resources */,
@@ -243,8 +254,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				E83F82B92444E0A60052DB21 /* Base */,
+				E8713D2824879DB800F9A62D /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E8713D2B24879DE700F9A62D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E8713D2A24879DE700F9A62D /* en */,
+				E8713D2C24879ED100F9A62D /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -254,6 +275,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -314,6 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

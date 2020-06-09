@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  Health Tracker
+
+  Created by Roman Khodukin on 03.06.2020.
+  Copyright © 2020 Roman Khodukin. All rights reserved.
+*/
+
+"Your health\nOur care" = "Your health\nOur care";
+"Your Email" = "Your Email";
+"Password" = "Password";
+"Forgot password?" = "Forgot password?";
+"Log in" = "Log in";
+"Logging in..." = "Logging in...";
+"Something went wrong" = "Something went wrong";
