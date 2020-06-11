@@ -14,9 +14,32 @@ struct AddPressureView: View {
     @Environment(\.presentationMode) var presentationMode
     
     @State var isTextFieldFocused = false
+    @State var offsetValue: CGFloat = 0
+    
     @State var highPressure: String = ""
     @State var lowPressure: String = ""
     @State var pulse: String = ""
+    
+    func keyboardNotification() {
+        NotificationCenter.default.addObserver(
+        forName: UIResponder.keyboardWillShowNotification,
+        object: nil,
+        queue: .main) { (notification) in
+            let value = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+            let height = value.height
+            
+            self.isTextFieldFocused = true
+            self.offsetValue = height
+        }
+        
+        NotificationCenter.default.addObserver(
+        forName: UIResponder.keyboardWillHideNotification,
+        object: nil,
+        queue: .main) { _ in
+            self.isTextFieldFocused = false
+            self.offsetValue = 0
+        }
+    }
     
     func hideKeyboard() {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -32,7 +55,7 @@ struct AddPressureView: View {
                         .padding(.top, 16)
                         .padding(.bottom, 32)
                         .offset(y: isTextFieldFocused ? -100 : 0)
-                        .animation(isTextFieldFocused ? .easeInOut : nil)
+                        .animation(.easeInOut)
                     
                     VStack {
                         HStack {
@@ -58,6 +81,9 @@ struct AddPressureView: View {
                             }
                             .onTapGesture {
                                 self.isTextFieldFocused = true
+                            }
+                            .onAppear {
+                                self.keyboardNotification()
                             }
                         }
                         .padding(.bottom, 16)
@@ -86,6 +112,9 @@ struct AddPressureView: View {
                             .onTapGesture {
                                 self.isTextFieldFocused = true
                             }
+                            .onAppear {
+                                self.keyboardNotification()
+                            }
                         }
                         .padding(.bottom, 16)
                         
@@ -113,6 +142,9 @@ struct AddPressureView: View {
                             }
                             .onTapGesture {
                                 self.isTextFieldFocused = true
+                            }
+                            .onAppear {
+                                self.keyboardNotification()
                             }
                         }
                         .padding(.bottom, 16)
@@ -145,8 +177,8 @@ struct AddPressureView: View {
                     
                     
                 }
-                .offset(y: isTextFieldFocused ? -300 : 0)
-                .animation(isTextFieldFocused ? .easeInOut : nil)
+                .offset(y: -self.offsetValue)
+                .animation(.spring())
                 .onTapGesture {
                     self.isTextFieldFocused = false
                     self.hideKeyboard()

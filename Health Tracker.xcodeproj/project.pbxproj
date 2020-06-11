@@ -27,6 +27,8 @@
 		E8BDCBB5248797F900A0E1E4 /* healthreport.json in Resources */ = {isa = PBXBuildFile; fileRef = E8BDCBB4248797F900A0E1E4 /* healthreport.json */; };
 		E8C6E7C72491AF6C00BBBFEE /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7C62491AF6C00BBBFEE /* BMI.swift */; };
 		E8C6E7C92491B02500BBBFEE /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7C82491B02500BBBFEE /* Analysis.swift */; };
+		E8C6E7CB2491B9C100BBBFEE /* AddAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */; };
+		E8C6E7CD2491BA1700BBBFEE /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */; };
 		E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1B2487008D00376261 /* Modifiers.swift */; };
 		E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */; };
 		E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1F24870F3A00376261 /* DefaultCard.swift */; };
@@ -63,6 +65,8 @@
 		E8BDCBB4248797F900A0E1E4 /* healthreport.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthreport.json; sourceTree = "<group>"; };
 		E8C6E7C62491AF6C00BBBFEE /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		E8C6E7C82491B02500BBBFEE /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
+		E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnalysisView.swift; sourceTree = "<group>"; };
+		E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		E8ED9B1B2487008D00376261 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCard.swift; sourceTree = "<group>"; };
 		E8ED9B1F24870F3A00376261 /* DefaultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCard.swift; sourceTree = "<group>"; };
@@ -108,16 +112,18 @@
 			children = (
 				E8A446662490662000D3827F /* CoreData */,
 				E8ED9B1A2487006A00376261 /* Utilities */,
-				E83F82C12444E2620052DB21 /* CustomView */,
+				E83F82C12444E2620052DB21 /* ExtractedViews */,
+				E8A138942487484E0049265A /* UserStore.swift */,
 				E83F82AD2444E0A40052DB21 /* AppDelegate.swift */,
 				E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */,
 				E8ED9B2124871CE400376261 /* LoginView.swift */,
-				E8A138942487484E0049265A /* UserStore.swift */,
 				E83F82B12444E0A40052DB21 /* DashboardView.swift */,
 				E8A4463A2490554800D3827F /* AddPressureView.swift */,
 				E8A446732491467F00D3827F /* ContentView.swift */,
+				E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */,
 				E8A44675249146E800D3827F /* MeasurementView.swift */,
 				E83F82B52444E0A60052DB21 /* Preview Content */,
+				E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */,
 			);
 			path = "Health Tracker";
 			sourceTree = "<group>";
@@ -130,7 +136,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E83F82C12444E2620052DB21 /* CustomView */ = {
+		E83F82C12444E2620052DB21 /* ExtractedViews */ = {
 			isa = PBXGroup;
 			children = (
 				E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */,
@@ -138,7 +144,7 @@
 				E8ED9B2F248730E300376261 /* LoadingView.swift */,
 				E8ED9B332487350A00376261 /* SuccessView.swift */,
 			);
-			path = CustomView;
+			path = ExtractedViews;
 			sourceTree = "<group>";
 		};
 		E8A446662490662000D3827F /* CoreData */ = {
@@ -270,6 +276,7 @@
 				E8ED9B2E24872F9F00376261 /* LottieView.swift in Sources */,
 				E8A446682490663900D3827F /* Pressure.swift in Sources */,
 				E8A4466A24906C8100D3827F /* CoreDataService.swift in Sources */,
+				E8C6E7CB2491B9C100BBBFEE /* AddAnalysisView.swift in Sources */,
 				E8ED9B30248730E300376261 /* LoadingView.swift in Sources */,
 				E8ED9B2224871CE400376261 /* LoginView.swift in Sources */,
 				E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */,
@@ -284,6 +291,7 @@
 				E83F82B22444E0A40052DB21 /* DashboardView.swift in Sources */,
 				E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */,
 				E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */,
+				E8C6E7CD2491BA1700BBBFEE /* AnalysisView.swift in Sources */,
 				E8A446652490645C00D3827F /* AppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
