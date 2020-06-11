@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct BloodPressureCard: View {
-    var highPressure: Int
-    var lowPressure: Int
+    var highPressure: String
+    var lowPressure: String
     
     var body: some View {
         VStack {
@@ -41,6 +41,7 @@ struct BloodPressureCard: View {
                     }
                                         
                     Divider().padding(.vertical, 16)
+                        .padding(.horizontal, 16)
 
                     VStack(alignment: .center) {
                         Text("\(lowPressure)")
@@ -57,7 +58,7 @@ struct BloodPressureCard: View {
             }
         }
         .padding(.horizontal, 16)
-        .frame(width: 275, height: 180)
+        .frame(width: 300, height: 180)
         .background(Color.white)
         .cornerRadius(30)
         .modifier(ShadowModifier())
@@ -66,6 +67,6 @@ struct BloodPressureCard: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        BloodPressureCard(highPressure: 120, lowPressure: 80)
+        BloodPressureCard(highPressure: "120", lowPressure: "80")
     }
 }

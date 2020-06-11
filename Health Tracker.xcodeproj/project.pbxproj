@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		E83F82AE2444E0A40052DB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F82AD2444E0A40052DB21 /* AppDelegate.swift */; };
 		E83F82B02444E0A40052DB21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */; };
-		E83F82B22444E0A40052DB21 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F82B12444E0A40052DB21 /* ContentView.swift */; };
+		E83F82B22444E0A40052DB21 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F82B12444E0A40052DB21 /* DashboardView.swift */; };
 		E83F82B42444E0A60052DB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B32444E0A60052DB21 /* Assets.xcassets */; };
 		E83F82B72444E0A60052DB21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */; };
 		E83F82BA2444E0A60052DB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B82444E0A60052DB21 /* LaunchScreen.storyboard */; };
@@ -18,7 +18,15 @@
 		E8A13893248744D50049265A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E8A13892248744D50049265A /* Lottie */; };
 		E8A138952487484E0049265A /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A138942487484E0049265A /* UserStore.swift */; };
 		E8A1389724874D1C0049265A /* medical.json in Resources */ = {isa = PBXBuildFile; fileRef = E8A1389624874D1C0049265A /* medical.json */; };
+		E8A4463B2490554800D3827F /* AddPressureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A4463A2490554800D3827F /* AddPressureView.swift */; };
+		E8A446652490645C00D3827F /* AppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E8A446632490645C00D3827F /* AppModel.xcdatamodeld */; };
+		E8A446682490663900D3827F /* Pressure.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A446672490663900D3827F /* Pressure.swift */; };
+		E8A4466A24906C8100D3827F /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A4466924906C8100D3827F /* CoreDataService.swift */; };
+		E8A446742491467F00D3827F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A446732491467F00D3827F /* ContentView.swift */; };
+		E8A44676249146E800D3827F /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A44675249146E800D3827F /* MeasurementView.swift */; };
 		E8BDCBB5248797F900A0E1E4 /* healthreport.json in Resources */ = {isa = PBXBuildFile; fileRef = E8BDCBB4248797F900A0E1E4 /* healthreport.json */; };
+		E8C6E7C72491AF6C00BBBFEE /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7C62491AF6C00BBBFEE /* BMI.swift */; };
+		E8C6E7C92491B02500BBBFEE /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7C82491B02500BBBFEE /* Analysis.swift */; };
 		E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1B2487008D00376261 /* Modifiers.swift */; };
 		E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */; };
 		E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1F24870F3A00376261 /* DefaultCard.swift */; };
@@ -35,7 +43,7 @@
 		E83F82AA2444E0A40052DB21 /* Health Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83F82AD2444E0A40052DB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E83F82B12444E0A40052DB21 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E83F82B12444E0A40052DB21 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		E83F82B32444E0A60052DB21 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E83F82B92444E0A60052DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,7 +54,15 @@
 		E8A1388F24873F870049265A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8A138942487484E0049265A /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		E8A1389624874D1C0049265A /* medical.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medical.json; sourceTree = "<group>"; };
+		E8A4463A2490554800D3827F /* AddPressureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPressureView.swift; sourceTree = "<group>"; };
+		E8A446642490645C00D3827F /* AppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppModel.xcdatamodel; sourceTree = "<group>"; };
+		E8A446672490663900D3827F /* Pressure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pressure.swift; sourceTree = "<group>"; };
+		E8A4466924906C8100D3827F /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
+		E8A446732491467F00D3827F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E8A44675249146E800D3827F /* MeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
 		E8BDCBB4248797F900A0E1E4 /* healthreport.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthreport.json; sourceTree = "<group>"; };
+		E8C6E7C62491AF6C00BBBFEE /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
+		E8C6E7C82491B02500BBBFEE /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
 		E8ED9B1B2487008D00376261 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCard.swift; sourceTree = "<group>"; };
 		E8ED9B1F24870F3A00376261 /* DefaultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCard.swift; sourceTree = "<group>"; };
@@ -90,16 +106,17 @@
 		E83F82AC2444E0A40052DB21 /* Health Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				E8A446662490662000D3827F /* CoreData */,
 				E8ED9B1A2487006A00376261 /* Utilities */,
 				E83F82C12444E2620052DB21 /* CustomView */,
 				E83F82AD2444E0A40052DB21 /* AppDelegate.swift */,
+				E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */,
 				E8ED9B2124871CE400376261 /* LoginView.swift */,
 				E8A138942487484E0049265A /* UserStore.swift */,
-				E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */,
-				E83F82B12444E0A40052DB21 /* ContentView.swift */,
-				E83F82B32444E0A60052DB21 /* Assets.xcassets */,
-				E83F82B82444E0A60052DB21 /* LaunchScreen.storyboard */,
-				E83F82BB2444E0A60052DB21 /* Info.plist */,
+				E83F82B12444E0A40052DB21 /* DashboardView.swift */,
+				E8A4463A2490554800D3827F /* AddPressureView.swift */,
+				E8A446732491467F00D3827F /* ContentView.swift */,
+				E8A44675249146E800D3827F /* MeasurementView.swift */,
 				E83F82B52444E0A60052DB21 /* Preview Content */,
 			);
 			path = "Health Tracker";
@@ -124,11 +141,27 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
+		E8A446662490662000D3827F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E8A446632490645C00D3827F /* AppModel.xcdatamodeld */,
+				E8A4466924906C8100D3827F /* CoreDataService.swift */,
+				E8A446672490663900D3827F /* Pressure.swift */,
+				E8C6E7C62491AF6C00BBBFEE /* BMI.swift */,
+				E8C6E7C82491B02500BBBFEE /* Analysis.swift */,
+			);
+			name = CoreData;
+			path = Utilities/CoreData;
+			sourceTree = "<group>";
+		};
 		E8ED9B1A2487006A00376261 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E8A1388F24873F870049265A /* GoogleService-Info.plist */,
 				E8ED9B2524872F3000376261 /* Lottie */,
+				E83F82B82444E0A60052DB21 /* LaunchScreen.storyboard */,
+				E83F82B32444E0A60052DB21 /* Assets.xcassets */,
+				E83F82BB2444E0A60052DB21 /* Info.plist */,
+				E8A1388F24873F870049265A /* GoogleService-Info.plist */,
 				E8ED9B1B2487008D00376261 /* Modifiers.swift */,
 				E8ED9B232487257100376261 /* BlurView.swift */,
 				E8ED9B2D24872F9F00376261 /* LottieView.swift */,
@@ -235,15 +268,23 @@
 				E83F82AE2444E0A40052DB21 /* AppDelegate.swift in Sources */,
 				E8ED9B242487257100376261 /* BlurView.swift in Sources */,
 				E8ED9B2E24872F9F00376261 /* LottieView.swift in Sources */,
+				E8A446682490663900D3827F /* Pressure.swift in Sources */,
+				E8A4466A24906C8100D3827F /* CoreDataService.swift in Sources */,
 				E8ED9B30248730E300376261 /* LoadingView.swift in Sources */,
 				E8ED9B2224871CE400376261 /* LoginView.swift in Sources */,
 				E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */,
+				E8C6E7C72491AF6C00BBBFEE /* BMI.swift in Sources */,
+				E8C6E7C92491B02500BBBFEE /* Analysis.swift in Sources */,
 				E8A138952487484E0049265A /* UserStore.swift in Sources */,
 				E83F82B02444E0A40052DB21 /* SceneDelegate.swift in Sources */,
+				E8A4463B2490554800D3827F /* AddPressureView.swift in Sources */,
+				E8A44676249146E800D3827F /* MeasurementView.swift in Sources */,
+				E8A446742491467F00D3827F /* ContentView.swift in Sources */,
 				E8ED9B342487350A00376261 /* SuccessView.swift in Sources */,
-				E83F82B22444E0A40052DB21 /* ContentView.swift in Sources */,
+				E83F82B22444E0A40052DB21 /* DashboardView.swift in Sources */,
 				E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */,
 				E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */,
+				E8A446652490645C00D3827F /* AppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +437,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Health Tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = AC7SNZV8BM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Health Tracker/Info.plist";
+				INFOPLIST_FILE = "Health Tracker/Utilities/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -417,7 +458,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Health Tracker/Preview Content\"";
 				DEVELOPMENT_TEAM = AC7SNZV8BM;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "Health Tracker/Info.plist";
+				INFOPLIST_FILE = "Health Tracker/Utilities/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,6 +511,19 @@
 			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		E8A446632490645C00D3827F /* AppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E8A446642490645C00D3827F /* AppModel.xcdatamodel */,
+			);
+			currentVersion = E8A446642490645C00D3827F /* AppModel.xcdatamodel */;
+			path = AppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E83F82A22444E0A40052DB21 /* Project object */;
 }

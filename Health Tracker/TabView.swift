@@ -10,21 +10,17 @@ import SwiftUI
 
 
 struct ContentView: View {
-     let managedObjectContext = CoreDataService.instance.persistentContainer.viewContext
-    
     var body: some View {
         TabView {
-            DashboardView()
+            Text("The content of the first view")
                 .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("Главная")
+                    Image(systemName: "phone.fill")
+                    Text("First Tab")
             }
-            .environment(\.managedObjectContext, managedObjectContext)
-            
-            MeasurementView()
+            Text("The content of the second view")
                 .tabItem {
-                    Image("diary")
-                    Text("Замеры")
+                    Image(systemName: "tv.fill")
+                    Text("Second Tab")
             }
         }
     }
