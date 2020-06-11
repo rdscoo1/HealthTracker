@@ -113,17 +113,12 @@
 				E8A446662490662000D3827F /* CoreData */,
 				E8ED9B1A2487006A00376261 /* Utilities */,
 				E83F82C12444E2620052DB21 /* ExtractedViews */,
+				E8C6E7CF2491BA9000BBBFEE /* Views */,
 				E8A138942487484E0049265A /* UserStore.swift */,
 				E83F82AD2444E0A40052DB21 /* AppDelegate.swift */,
 				E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */,
-				E8ED9B2124871CE400376261 /* LoginView.swift */,
-				E83F82B12444E0A40052DB21 /* DashboardView.swift */,
-				E8A4463A2490554800D3827F /* AddPressureView.swift */,
 				E8A446732491467F00D3827F /* ContentView.swift */,
-				E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */,
-				E8A44675249146E800D3827F /* MeasurementView.swift */,
 				E83F82B52444E0A60052DB21 /* Preview Content */,
-				E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */,
 			);
 			path = "Health Tracker";
 			sourceTree = "<group>";
@@ -158,6 +153,27 @@
 			);
 			name = CoreData;
 			path = Utilities/CoreData;
+			sourceTree = "<group>";
+		};
+		E8C6E7CF2491BA9000BBBFEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED9B2124871CE400376261 /* LoginView.swift */,
+				E83F82B12444E0A40052DB21 /* DashboardView.swift */,
+				E8A4463A2490554800D3827F /* AddPressureView.swift */,
+				E8A44675249146E800D3827F /* MeasurementView.swift */,
+				E8C6E7D02491BAA400BBBFEE /* Analysis */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E8C6E7D02491BAA400BBBFEE /* Analysis */ = {
+			isa = PBXGroup;
+			children = (
+				E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */,
+				E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */,
+			);
+			path = Analysis;
 			sourceTree = "<group>";
 		};
 		E8ED9B1A2487006A00376261 /* Utilities */ = {
