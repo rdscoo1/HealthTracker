@@ -21,7 +21,7 @@ extension Pressure {
         let requst: NSFetchRequest<Pressure> = Pressure.fetchRequest() as!
         NSFetchRequest<Pressure>
         
-        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
         
         requst.sortDescriptors = [sortDescriptor]
         

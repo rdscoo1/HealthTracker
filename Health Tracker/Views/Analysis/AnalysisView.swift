@@ -24,16 +24,16 @@ struct AnalysisView: View {
             ZStack {
                 List {
                     Section(header: FirstMeasurementHeader(), footer: EmptyView()) {
-                        AnalysisCard(glucose: "\(analysisItems.last?.glucose ?? "--")",
-                            сholesterol: "\(analysisItems.last?.cholesterol ?? "--")",
-                            hemoglobin: "\(analysisItems.last?.hemoglobin ?? "--")",
-                            time: "\(analysisItems.last?.createdAt?.toString(dateFormat: .fullDate) ?? "--")")
+                        AnalysisCard(glucose: "\(analysisItems.first?.glucose ?? "--")",
+                            сholesterol: "\(analysisItems.first?.cholesterol ?? "--")",
+                            hemoglobin: "\(analysisItems.first?.hemoglobin ?? "--")",
+                            time: "\(analysisItems.first?.createdAt?.toString(dateFormat: .fullDate) ?? "--")")
                             .padding(.vertical, 8)
                             .padding(.horizontal)
                     }
                     
                     Section(header: HistoryHeader()) {
-                        ForEach(self.analysisItems.dropLast().reversed()) { item in
+                        ForEach(self.analysisItems.dropFirst()) { item in
                             AnalysisCard(glucose: "\(item.glucose ?? "--")",
                                 сholesterol: "\(item.cholesterol ?? "--")",
                                 hemoglobin: "\(item.hemoglobin ?? "--")",

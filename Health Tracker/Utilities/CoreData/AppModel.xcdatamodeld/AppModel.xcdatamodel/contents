@@ -12,7 +12,7 @@
         <attribute name="low" optional="YES" attributeType="String"/>
         <attribute name="pulse" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
+    <entity name="Profile" representedClassName=".Profile" syncable="YES">
         <attribute name="birthdate" optional="YES" attributeType="String"/>
         <attribute name="gender" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="id" optional="YES" attributeType="String"/>

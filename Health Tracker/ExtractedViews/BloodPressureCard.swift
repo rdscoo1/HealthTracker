@@ -14,6 +14,46 @@ struct BloodPressureCard: View {
     var pulse: String
     var time: String
     
+    func getPressureColor(pressure: String) -> UIColor {
+        guard let highPressure = Int(pressure) else {
+            return (.clear)
+        }
+        switch highPressure {
+        case 0..<120:
+            return (#colorLiteral(red: 0.2235294118, green: 0.7098039216, blue: 0.2901960784, alpha: 1))
+        case 120..<130:
+            return (#colorLiteral(red: 0.2235294118, green: 0.7098039216, blue: 0.2901960784, alpha: 1))
+        case 130..<140:
+            return (#colorLiteral(red: 0.968627451, green: 0.5411764706, blue: 0.02745098039, alpha: 1))
+        case 140..<160:
+            return (#colorLiteral(red: 0.968627451, green: 0.5411764706, blue: 0.02745098039, alpha: 1))
+        case 160..<180:
+            return (#colorLiteral(red: 0.7294117647, green: 0.2117647059, blue: 0.03921568627, alpha: 1))
+        default:
+            return (#colorLiteral(red: 0.7294117647, green: 0.2117647059, blue: 0.03921568627, alpha: 1))
+        }
+    }
+    
+    func getPressureType(high: String) -> String {
+        guard let highPressure = Int(high) else {
+            return ("")
+        }
+        switch highPressure {
+        case 0..<120:
+            return ("Оптимальное")
+        case 120..<130:
+            return ("Нормальное")
+        case 130..<140:
+            return ("Высокое нормальное")
+        case 140..<160:
+            return ("Высокое")
+        case 160..<180:
+            return ("Очень высокое")
+        default:
+            return ("Крайне высокое")
+        }
+    }
+    
     var body: some View {
         VStack {
             
@@ -29,11 +69,11 @@ struct BloodPressureCard: View {
             HStack {
                 ZStack {
                     Rectangle()
-                        .frame(width: 144, height: 32)
-                        .foregroundColor(Color.green)
+                        .frame(width: 200, height: 32)
+                        .foregroundColor(Color(getPressureColor(pressure: highPressure)))
                         .cornerRadius(14)
                     
-                    Text("Нормальное")
+                    Text(getPressureType(high: highPressure))
                         .font(.system(size: 18, weight: .medium))
                         .foregroundColor(Color.white)
                 }

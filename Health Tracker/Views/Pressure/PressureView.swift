@@ -48,13 +48,13 @@ struct PressureView: View {
                 
                 List {
                     Section(header: FirstMeasurementHeader(), footer: EmptyView()) {
-                        BloodPressureCard(highPressure: "\(pressureItems.last?.high ?? "--")", lowPressure: "\(pressureItems.last?.low ?? "--")", pulse: "\(pressureItems.last?.pulse ?? "--")", time: "\(pressureItems.last?.createdAt?.toString(dateFormat: .dateTime) ?? "--")")
+                        BloodPressureCard(highPressure: "\(pressureItems.first?.high ?? "--")", lowPressure: "\(pressureItems.first?.low ?? "--")", pulse: "\(pressureItems.first?.pulse ?? "--")", time: "\(pressureItems.first?.createdAt?.toString(dateFormat: .dateTime) ?? "--")")
                             .padding(.vertical, 8)
                             .padding(.horizontal)
                     }
                     
                     Section(header: HistoryHeader()) {
-                        ForEach(self.pressureItems.dropLast().reversed()) { pressureItem in
+                        ForEach(self.pressureItems.dropFirst()) { pressureItem in
                             BloodPressureCard(highPressure: "\(pressureItem.high )",
                                 lowPressure: "\(pressureItem.low )",
                                 pulse: "\(pressureItem.pulse ?? "--")",

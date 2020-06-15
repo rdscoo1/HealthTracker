@@ -20,7 +20,7 @@ extension Analysis {
     static func getAllAnalysisItems() -> NSFetchRequest<Analysis> {
         let request: NSFetchRequest<Analysis> = Analysis.fetchRequest() as! NSFetchRequest<Analysis>
         
-        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "createdAt", ascending: false)
         
         request.sortDescriptors = [sortDescriptor]
         
