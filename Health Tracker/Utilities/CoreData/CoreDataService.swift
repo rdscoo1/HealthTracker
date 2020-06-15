@@ -6,7 +6,6 @@
 //  Copyright © 2020 Roman Khodukin. All rights reserved.
 //
 
-import Foundation
 import CoreData
 
 class CoreDataService {

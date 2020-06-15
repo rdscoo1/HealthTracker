@@ -51,7 +51,7 @@ struct AddPressureView: View {
                 VStack {
                     Image("addPressureIllustration")
                         .resizable()
-                        .frame(width: 288, height: 256)
+                        .frame(width: 256, height: 224)
                         .padding(.top, 16)
                         .padding(.bottom, 32)
                         .offset(y: isTextFieldFocused ? -100 : 0)
@@ -168,14 +168,13 @@ struct AddPressureView: View {
                     }) {
                         Text("Сохранить")
                             .foregroundColor(.white)
+                            .padding(.vertical, 16)
+                            .padding(.horizontal, 96)
                     }
-                    .padding(16)
-                    .padding(.horizontal, 96)
                     .background(Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)))
                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     .shadow(color: Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
-                    
-                    
+                    .padding(.bottom, 16)
                 }
                 .offset(y: -self.offsetValue)
                 .animation(.spring())

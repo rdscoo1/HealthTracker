@@ -6,20 +6,21 @@
         <attribute name="glucose" optional="YES" attributeType="String"/>
         <attribute name="hemoglobin" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="BMI" representedClassName=".Weight" syncable="YES">
-        <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="height" optional="YES" attributeType="String"/>
-        <attribute name="weight" optional="YES" attributeType="String"/>
-    </entity>
     <entity name="Pressure" representedClassName=".Pressure" syncable="YES">
         <attribute name="createdAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="high" attributeType="String"/>
         <attribute name="low" optional="YES" attributeType="String"/>
         <attribute name="pulse" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Profile" representedClassName="Profile" syncable="YES" codeGenerationType="class">
+        <attribute name="birthdate" optional="YES" attributeType="String"/>
+        <attribute name="gender" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="username" optional="YES" attributeType="String"/>
+    </entity>
     <elements>
-        <element name="Pressure" positionX="-63" positionY="-18" width="128" height="103"/>
-        <element name="BMI" positionX="-63" positionY="9" width="128" height="88"/>
         <element name="Analysis" positionX="-54" positionY="27" width="128" height="103"/>
+        <element name="Pressure" positionX="-63" positionY="-18" width="128" height="103"/>
+        <element name="Profile" positionX="-54" positionY="36" width="128" height="103"/>
     </elements>
 </model>

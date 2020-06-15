@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81EC12E2491BC6A0036467B /* AnalysisCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81EC12D2491BC6A0036467B /* AnalysisCard.swift */; };
 		E83F82AE2444E0A40052DB21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F82AD2444E0A40052DB21 /* AppDelegate.swift */; };
 		E83F82B02444E0A40052DB21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */; };
 		E83F82B22444E0A40052DB21 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83F82B12444E0A40052DB21 /* DashboardView.swift */; };
 		E83F82B42444E0A60052DB21 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B32444E0A60052DB21 /* Assets.xcassets */; };
 		E83F82B72444E0A60052DB21 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */; };
 		E83F82BA2444E0A60052DB21 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83F82B82444E0A60052DB21 /* LaunchScreen.storyboard */; };
+		E867BC352495ACCD00F098D5 /* PressureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867BC342495ACCD00F098D5 /* PressureView.swift */; };
+		E867BC3A2495B6C400F098D5 /* HistoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867BC392495B6C400F098D5 /* HistoryButton.swift */; };
+		E867BC3C2495C1B300F098D5 /* BloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867BC3B2495C1B300F098D5 /* BloodPressureCard.swift */; };
+		E867BC3F2495C63800F098D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867BC3E2495C63800F098D5 /* DateExtension.swift */; };
 		E8713D2924879DE700F9A62D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8713D2B24879DE700F9A62D /* Localizable.strings */; };
 		E8A1389024873F870049265A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A1388F24873F870049265A /* GoogleService-Info.plist */; };
 		E8A13893248744D50049265A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E8A13892248744D50049265A /* Lottie */; };
@@ -25,12 +30,11 @@
 		E8A446742491467F00D3827F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A446732491467F00D3827F /* ContentView.swift */; };
 		E8A44676249146E800D3827F /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A44675249146E800D3827F /* MeasurementView.swift */; };
 		E8BDCBB5248797F900A0E1E4 /* healthreport.json in Resources */ = {isa = PBXBuildFile; fileRef = E8BDCBB4248797F900A0E1E4 /* healthreport.json */; };
-		E8C6E7C72491AF6C00BBBFEE /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7C62491AF6C00BBBFEE /* BMI.swift */; };
 		E8C6E7C92491B02500BBBFEE /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7C82491B02500BBBFEE /* Analysis.swift */; };
 		E8C6E7CB2491B9C100BBBFEE /* AddAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */; };
 		E8C6E7CD2491BA1700BBBFEE /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */; };
 		E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1B2487008D00376261 /* Modifiers.swift */; };
-		E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */; };
+		E8ED9B1E2487024B00376261 /* DashboardBloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1D2487024B00376261 /* DashboardBloodPressureCard.swift */; };
 		E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1F24870F3A00376261 /* DefaultCard.swift */; };
 		E8ED9B2224871CE400376261 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B2124871CE400376261 /* LoginView.swift */; };
 		E8ED9B242487257100376261 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B232487257100376261 /* BlurView.swift */; };
@@ -39,9 +43,29 @@
 		E8ED9B322487326700376261 /* loadingheart.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ED9B312487326600376261 /* loadingheart.json */; };
 		E8ED9B342487350A00376261 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B332487350A00376261 /* SuccessView.swift */; };
 		E8ED9B382487391600376261 /* morningtea.json in Resources */ = {isa = PBXBuildFile; fileRef = E8ED9B372487391600376261 /* morningtea.json */; };
+		E8EEB5A32495D44C00D83E0F /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5A22495D44C00D83E0F /* WeightView.swift */; };
+		E8EEB5A52495D96000D83E0F /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5A42495D96000D83E0F /* ChartsView.swift */; };
+		E8EEB5A72495EF2F00D83E0F /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5A62495EF2F00D83E0F /* ViewExtension.swift */; };
+		E8EEB5BC2495F05000D83E0F /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5AA2495F05000D83E0F /* BarChartView.swift */; };
+		E8EEB5BD2495F05000D83E0F /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5AB2495F05000D83E0F /* BarChartRow.swift */; };
+		E8EEB5BE2495F05000D83E0F /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5AC2495F05000D83E0F /* LabelView.swift */; };
+		E8EEB5BF2495F05000D83E0F /* BarChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5AD2495F05000D83E0F /* BarChartCell.swift */; };
+		E8EEB5C02495F05000D83E0F /* IndicatorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5AF2495F05000D83E0F /* IndicatorPoint.swift */; };
+		E8EEB5C12495F05000D83E0F /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B02495F05000D83E0F /* LineView.swift */; };
+		E8EEB5C22495F05000D83E0F /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B12495F05000D83E0F /* Legend.swift */; };
+		E8EEB5C32495F05000D83E0F /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B22495F05000D83E0F /* LineChartView.swift */; };
+		E8EEB5C42495F05000D83E0F /* MagnifierRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B32495F05000D83E0F /* MagnifierRect.swift */; };
+		E8EEB5C52495F05000D83E0F /* Path+QuadCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B42495F05000D83E0F /* Path+QuadCurve.swift */; };
+		E8EEB5C62495F05000D83E0F /* MultiLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B52495F05000D83E0F /* MultiLineChartView.swift */; };
+		E8EEB5C72495F05000D83E0F /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B62495F05000D83E0F /* Line.swift */; };
+		E8EEB5C82495F05000D83E0F /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B72495F05000D83E0F /* Helpers.swift */; };
+		E8EEB5C92495F05000D83E0F /* PieChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5B92495F05000D83E0F /* PieChartRow.swift */; };
+		E8EEB5CA2495F05000D83E0F /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5BA2495F05000D83E0F /* PieChartCell.swift */; };
+		E8EEB5CB2495F05000D83E0F /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8EEB5BB2495F05000D83E0F /* PieChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E81EC12D2491BC6A0036467B /* AnalysisCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisCard.swift; sourceTree = "<group>"; };
 		E83F82AA2444E0A40052DB21 /* Health Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Health Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83F82AD2444E0A40052DB21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E83F82AF2444E0A40052DB21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +74,10 @@
 		E83F82B62444E0A60052DB21 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E83F82B92444E0A60052DB21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E83F82BB2444E0A60052DB21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E867BC342495ACCD00F098D5 /* PressureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressureView.swift; sourceTree = "<group>"; };
+		E867BC392495B6C400F098D5 /* HistoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryButton.swift; sourceTree = "<group>"; };
+		E867BC3B2495C1B300F098D5 /* BloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCard.swift; sourceTree = "<group>"; };
+		E867BC3E2495C63800F098D5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		E8713D2824879DB800F9A62D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E8713D2A24879DE700F9A62D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E8713D2C24879ED100F9A62D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -63,12 +91,11 @@
 		E8A446732491467F00D3827F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E8A44675249146E800D3827F /* MeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
 		E8BDCBB4248797F900A0E1E4 /* healthreport.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthreport.json; sourceTree = "<group>"; };
-		E8C6E7C62491AF6C00BBBFEE /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		E8C6E7C82491B02500BBBFEE /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
 		E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnalysisView.swift; sourceTree = "<group>"; };
 		E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		E8ED9B1B2487008D00376261 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
-		E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodPressureCard.swift; sourceTree = "<group>"; };
+		E8ED9B1D2487024B00376261 /* DashboardBloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBloodPressureCard.swift; sourceTree = "<group>"; };
 		E8ED9B1F24870F3A00376261 /* DefaultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCard.swift; sourceTree = "<group>"; };
 		E8ED9B2124871CE400376261 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E8ED9B232487257100376261 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
@@ -77,6 +104,25 @@
 		E8ED9B312487326600376261 /* loadingheart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loadingheart.json; sourceTree = "<group>"; };
 		E8ED9B332487350A00376261 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		E8ED9B372487391600376261 /* morningtea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = morningtea.json; sourceTree = "<group>"; };
+		E8EEB5A22495D44C00D83E0F /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
+		E8EEB5A42495D96000D83E0F /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
+		E8EEB5A62495EF2F00D83E0F /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		E8EEB5AA2495F05000D83E0F /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		E8EEB5AB2495F05000D83E0F /* BarChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartRow.swift; sourceTree = "<group>"; };
+		E8EEB5AC2495F05000D83E0F /* LabelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		E8EEB5AD2495F05000D83E0F /* BarChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
+		E8EEB5AF2495F05000D83E0F /* IndicatorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorPoint.swift; sourceTree = "<group>"; };
+		E8EEB5B02495F05000D83E0F /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		E8EEB5B12495F05000D83E0F /* Legend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
+		E8EEB5B22495F05000D83E0F /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		E8EEB5B32495F05000D83E0F /* MagnifierRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierRect.swift; sourceTree = "<group>"; };
+		E8EEB5B42495F05000D83E0F /* Path+QuadCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Path+QuadCurve.swift"; sourceTree = "<group>"; };
+		E8EEB5B52495F05000D83E0F /* MultiLineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiLineChartView.swift; sourceTree = "<group>"; };
+		E8EEB5B62495F05000D83E0F /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		E8EEB5B72495F05000D83E0F /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		E8EEB5B92495F05000D83E0F /* PieChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartRow.swift; sourceTree = "<group>"; };
+		E8EEB5BA2495F05000D83E0F /* PieChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		E8EEB5BB2495F05000D83E0F /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +137,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E82150C82496AA9C000B1311 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E8ED9B2124871CE400376261 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		E83F82A12444E0A40052DB21 = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +164,8 @@
 		E83F82AC2444E0A40052DB21 /* Health Tracker */ = {
 			isa = PBXGroup;
 			children = (
-				E8A446662490662000D3827F /* CoreData */,
 				E8ED9B1A2487006A00376261 /* Utilities */,
+				E8A446662490662000D3827F /* CoreData */,
 				E83F82C12444E2620052DB21 /* ExtractedViews */,
 				E8C6E7CF2491BA9000BBBFEE /* Views */,
 				E8A138942487484E0049265A /* UserStore.swift */,
@@ -134,12 +188,33 @@
 		E83F82C12444E2620052DB21 /* ExtractedViews */ = {
 			isa = PBXGroup;
 			children = (
-				E8ED9B1D2487024B00376261 /* BloodPressureCard.swift */,
+				E8ED9B1D2487024B00376261 /* DashboardBloodPressureCard.swift */,
 				E8ED9B1F24870F3A00376261 /* DefaultCard.swift */,
 				E8ED9B2F248730E300376261 /* LoadingView.swift */,
 				E8ED9B332487350A00376261 /* SuccessView.swift */,
+				E81EC12D2491BC6A0036467B /* AnalysisCard.swift */,
+				E867BC392495B6C400F098D5 /* HistoryButton.swift */,
+				E867BC3B2495C1B300F098D5 /* BloodPressureCard.swift */,
 			);
 			path = ExtractedViews;
+			sourceTree = "<group>";
+		};
+		E867BC332495ACA600F098D5 /* Pressure */ = {
+			isa = PBXGroup;
+			children = (
+				E8A4463A2490554800D3827F /* AddPressureView.swift */,
+				E867BC342495ACCD00F098D5 /* PressureView.swift */,
+			);
+			path = Pressure;
+			sourceTree = "<group>";
+		};
+		E867BC3D2495C62600F098D5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E867BC3E2495C63800F098D5 /* DateExtension.swift */,
+				E8EEB5A62495EF2F00D83E0F /* ViewExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		E8A446662490662000D3827F /* CoreData */ = {
@@ -148,7 +223,6 @@
 				E8A446632490645C00D3827F /* AppModel.xcdatamodeld */,
 				E8A4466924906C8100D3827F /* CoreDataService.swift */,
 				E8A446672490663900D3827F /* Pressure.swift */,
-				E8C6E7C62491AF6C00BBBFEE /* BMI.swift */,
 				E8C6E7C82491B02500BBBFEE /* Analysis.swift */,
 			);
 			name = CoreData;
@@ -158,11 +232,13 @@
 		E8C6E7CF2491BA9000BBBFEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E8ED9B2124871CE400376261 /* LoginView.swift */,
-				E83F82B12444E0A40052DB21 /* DashboardView.swift */,
-				E8A4463A2490554800D3827F /* AddPressureView.swift */,
-				E8A44675249146E800D3827F /* MeasurementView.swift */,
+				E82150C82496AA9C000B1311 /* Login */,
+				E8EEB5A12495D43600D83E0F /* Weight */,
 				E8C6E7D02491BAA400BBBFEE /* Analysis */,
+				E867BC332495ACA600F098D5 /* Pressure */,
+				E83F82B12444E0A40052DB21 /* DashboardView.swift */,
+				E8A44675249146E800D3827F /* MeasurementView.swift */,
+				E8EEB5A42495D96000D83E0F /* ChartsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +255,8 @@
 		E8ED9B1A2487006A00376261 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E8EEB5A82495F02F00D83E0F /* SwiftUICharts */,
+				E867BC3D2495C62600F098D5 /* Extensions */,
 				E8ED9B2524872F3000376261 /* Lottie */,
 				E83F82B82444E0A60052DB21 /* LaunchScreen.storyboard */,
 				E83F82B32444E0A60052DB21 /* Assets.xcassets */,
@@ -201,6 +279,61 @@
 				E8ED9B312487326600376261 /* loadingheart.json */,
 			);
 			path = Lottie;
+			sourceTree = "<group>";
+		};
+		E8EEB5A12495D43600D83E0F /* Weight */ = {
+			isa = PBXGroup;
+			children = (
+				E8EEB5A22495D44C00D83E0F /* WeightView.swift */,
+			);
+			path = Weight;
+			sourceTree = "<group>";
+		};
+		E8EEB5A82495F02F00D83E0F /* SwiftUICharts */ = {
+			isa = PBXGroup;
+			children = (
+				E8EEB5A92495F04F00D83E0F /* BarChart */,
+				E8EEB5B72495F05000D83E0F /* Helpers.swift */,
+				E8EEB5AE2495F05000D83E0F /* LineChart */,
+				E8EEB5B82495F05000D83E0F /* PieChart */,
+			);
+			path = SwiftUICharts;
+			sourceTree = "<group>";
+		};
+		E8EEB5A92495F04F00D83E0F /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				E8EEB5AA2495F05000D83E0F /* BarChartView.swift */,
+				E8EEB5AB2495F05000D83E0F /* BarChartRow.swift */,
+				E8EEB5AC2495F05000D83E0F /* LabelView.swift */,
+				E8EEB5AD2495F05000D83E0F /* BarChartCell.swift */,
+			);
+			path = BarChart;
+			sourceTree = "<group>";
+		};
+		E8EEB5AE2495F05000D83E0F /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				E8EEB5AF2495F05000D83E0F /* IndicatorPoint.swift */,
+				E8EEB5B02495F05000D83E0F /* LineView.swift */,
+				E8EEB5B12495F05000D83E0F /* Legend.swift */,
+				E8EEB5B22495F05000D83E0F /* LineChartView.swift */,
+				E8EEB5B32495F05000D83E0F /* MagnifierRect.swift */,
+				E8EEB5B42495F05000D83E0F /* Path+QuadCurve.swift */,
+				E8EEB5B52495F05000D83E0F /* MultiLineChartView.swift */,
+				E8EEB5B62495F05000D83E0F /* Line.swift */,
+			);
+			path = LineChart;
+			sourceTree = "<group>";
+		};
+		E8EEB5B82495F05000D83E0F /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				E8EEB5B92495F05000D83E0F /* PieChartRow.swift */,
+				E8EEB5BA2495F05000D83E0F /* PieChartCell.swift */,
+				E8EEB5BB2495F05000D83E0F /* PieChartView.swift */,
+			);
+			path = PieChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,27 +421,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				E83F82AE2444E0A40052DB21 /* AppDelegate.swift in Sources */,
+				E867BC3A2495B6C400F098D5 /* HistoryButton.swift in Sources */,
 				E8ED9B242487257100376261 /* BlurView.swift in Sources */,
 				E8ED9B2E24872F9F00376261 /* LottieView.swift in Sources */,
 				E8A446682490663900D3827F /* Pressure.swift in Sources */,
+				E8EEB5BC2495F05000D83E0F /* BarChartView.swift in Sources */,
 				E8A4466A24906C8100D3827F /* CoreDataService.swift in Sources */,
 				E8C6E7CB2491B9C100BBBFEE /* AddAnalysisView.swift in Sources */,
 				E8ED9B30248730E300376261 /* LoadingView.swift in Sources */,
 				E8ED9B2224871CE400376261 /* LoginView.swift in Sources */,
+				E8EEB5A52495D96000D83E0F /* ChartsView.swift in Sources */,
+				E8EEB5BD2495F05000D83E0F /* BarChartRow.swift in Sources */,
 				E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */,
-				E8C6E7C72491AF6C00BBBFEE /* BMI.swift in Sources */,
+				E8EEB5C62495F05000D83E0F /* MultiLineChartView.swift in Sources */,
+				E867BC352495ACCD00F098D5 /* PressureView.swift in Sources */,
+				E8EEB5C52495F05000D83E0F /* Path+QuadCurve.swift in Sources */,
+				E8EEB5C82495F05000D83E0F /* Helpers.swift in Sources */,
 				E8C6E7C92491B02500BBBFEE /* Analysis.swift in Sources */,
 				E8A138952487484E0049265A /* UserStore.swift in Sources */,
 				E83F82B02444E0A40052DB21 /* SceneDelegate.swift in Sources */,
 				E8A4463B2490554800D3827F /* AddPressureView.swift in Sources */,
 				E8A44676249146E800D3827F /* MeasurementView.swift in Sources */,
+				E81EC12E2491BC6A0036467B /* AnalysisCard.swift in Sources */,
+				E8EEB5C22495F05000D83E0F /* Legend.swift in Sources */,
+				E8EEB5A32495D44C00D83E0F /* WeightView.swift in Sources */,
+				E8EEB5BF2495F05000D83E0F /* BarChartCell.swift in Sources */,
 				E8A446742491467F00D3827F /* ContentView.swift in Sources */,
+				E8EEB5CB2495F05000D83E0F /* PieChartView.swift in Sources */,
+				E8EEB5C92495F05000D83E0F /* PieChartRow.swift in Sources */,
 				E8ED9B342487350A00376261 /* SuccessView.swift in Sources */,
 				E83F82B22444E0A40052DB21 /* DashboardView.swift in Sources */,
-				E8ED9B1E2487024B00376261 /* BloodPressureCard.swift in Sources */,
+				E8EEB5C42495F05000D83E0F /* MagnifierRect.swift in Sources */,
+				E8ED9B1E2487024B00376261 /* DashboardBloodPressureCard.swift in Sources */,
+				E8EEB5A72495EF2F00D83E0F /* ViewExtension.swift in Sources */,
+				E867BC3F2495C63800F098D5 /* DateExtension.swift in Sources */,
+				E8EEB5CA2495F05000D83E0F /* PieChartCell.swift in Sources */,
+				E8EEB5C72495F05000D83E0F /* Line.swift in Sources */,
 				E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */,
+				E8EEB5BE2495F05000D83E0F /* LabelView.swift in Sources */,
 				E8C6E7CD2491BA1700BBBFEE /* AnalysisView.swift in Sources */,
+				E8EEB5C32495F05000D83E0F /* LineChartView.swift in Sources */,
+				E8EEB5C12495F05000D83E0F /* LineView.swift in Sources */,
 				E8A446652490645C00D3827F /* AppModel.xcdatamodeld in Sources */,
+				E867BC3C2495C1B300F098D5 /* BloodPressureCard.swift in Sources */,
+				E8EEB5C02495F05000D83E0F /* IndicatorPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

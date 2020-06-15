@@ -14,23 +14,21 @@ struct DashboardView: View {
     @FetchRequest(fetchRequest: Pressure.getAllPressureItems()) var pressureItems: FetchedResults<Pressure>
     
     @State var showProfile = false
-    @State var showAddPressure = false
+    @State var showAddPressureView = false
     
     var body: some View {
         NavigationView {
             VStack {
-                BloodPressureCard(highPressure: "\(pressureItems.last?.high ?? "--")", lowPressure: "\(pressureItems.last?.low ?? "--")")
-                
-                Text("Пульс \(pressureItems.last?.pulse ?? "--")")
-                
+                DashboardBloodPressureCard(highPressure: "\(pressureItems.last?.high ?? "--")",
+                    lowPressure: "\(pressureItems.last?.low ?? "--")")
+                                
                 Spacer()
                 
                 Button(action: {
-                    self.showAddPressure.toggle()
+                    self.showAddPressureView.toggle()
                 }) {
                     Text("Добавить давление")
                         .foregroundColor(.white)
-
                 }
                 .padding(16)
                 .padding(.horizontal, 96)
@@ -38,7 +36,7 @@ struct DashboardView: View {
                 .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                 .shadow(color: Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
                 .buttonStyle(PlainButtonStyle())
-                .sheet(isPresented: $showAddPressure) {
+                .sheet(isPresented: $showAddPressureView) {
                     AddPressureView().environment(\.managedObjectContext, self.managedObjectContext)
                 }
             }

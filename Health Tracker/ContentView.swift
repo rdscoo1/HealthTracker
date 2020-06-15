@@ -26,6 +26,13 @@ struct ContentView: View {
                     Image("diary")
                     Text("Замеры")
             }
+            .environment(\.managedObjectContext, managedObjectContext)
+            
+            ChartsView()
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Профиль")
+            }
         }
     }
 }

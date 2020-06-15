@@ -9,8 +9,29 @@
 import SwiftUI
 
 struct MeasurementView: View {
+    @State var picker = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            VStack {
+                    Picker(selection: self.$picker,
+                           label: Text("")) {
+                            Text("Давление").tag(0)
+                            Text("Анализы").tag(2)
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .cornerRadius(8)
+                    .padding(.horizontal)
+                    .padding(.vertical, 8)
+                                    
+                    if self.picker == 0 {
+                        PressureView()
+                    } else {
+                        AnalysisView()
+                    }
+            }
+            .navigationBarTitle(Text("Замеры"), displayMode: .inline)
+        }
     }
 }
 
