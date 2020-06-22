@@ -12,6 +12,7 @@ struct PressureView: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @FetchRequest(fetchRequest: Pressure.getAllPressureItems()) var pressureItems: FetchedResults<Pressure>
     
+    @State var isNavigationBarHidden: Bool = true
     @State var showAddPressureView = false
     @State var showChartsView = false
     
@@ -25,7 +26,7 @@ struct PressureView: View {
             HStack {
                 Spacer()
                 
-                NavigationLink(destination: ChartsView().environment(\.managedObjectContext, self.managedObjectContext),
+                NavigationLink(destination: ChartsView(isNavigationBarHidden: self.$isNavigationBarHidden).environment(\.managedObjectContext, self.managedObjectContext),
                                isActive: self.$showChartsView) {
                                 EmptyView()
                 }
@@ -59,7 +60,7 @@ struct PressureView: View {
                                 lowPressure: "\(pressureItem.low )",
                                 pulse: "\(pressureItem.pulse ?? "--")",
                                 time: "\(pressureItem.createdAt?.toString(dateFormat: .dateTime) ?? "--")")
-                                .padding(.bottom, 4)
+                                .padding(.bottom, 12)
                                 .padding(.horizontal)
                         }
                     }
@@ -90,6 +91,11 @@ struct PressureView: View {
                         .padding(16)
                     }
                 }
+            }
+            .navigationBarHidden(self.isNavigationBarHidden)
+            .navigationBarTitle("")
+            .onAppear {
+                self.isNavigationBarHidden = true
             }
         }
     }

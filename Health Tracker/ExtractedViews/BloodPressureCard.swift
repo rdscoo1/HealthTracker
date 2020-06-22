@@ -118,14 +118,16 @@ struct BloodPressureCard: View {
                 Spacer()
                 
                 VStack(alignment: .center) {
-                    Text("\(pulse)")
-                        .font(.title)
-                        .fontWeight(.black)
-                        .foregroundColor(.primary)
-                        .lineLimit(3)
-                    Text("Пульс")
-                        .font(.headline)
-                        .foregroundColor(.secondary)
+                    if !pulse.isEmpty {
+                        Text("\(pulse)")
+                            .font(.title)
+                            .fontWeight(.black)
+                            .foregroundColor(.primary)
+                            .lineLimit(3)
+                        Text("Пульс")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
             .padding(.bottom)

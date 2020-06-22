@@ -15,6 +15,7 @@ struct AddPressureView: View {
     
     @State var isTextFieldFocused = false
     @State var offsetValue: CGFloat = 0
+    @State var showAlert = false
     
     @State var highPressure: String = ""
     @State var lowPressure: String = ""
@@ -22,22 +23,22 @@ struct AddPressureView: View {
     
     func keyboardNotification() {
         NotificationCenter.default.addObserver(
-        forName: UIResponder.keyboardWillShowNotification,
-        object: nil,
-        queue: .main) { (notification) in
-            let value = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
-            let height = value.height
-            
-            self.isTextFieldFocused = true
-            self.offsetValue = height
+            forName: UIResponder.keyboardWillShowNotification,
+            object: nil,
+            queue: .main) { (notification) in
+                let value = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+                let height = value.height
+                
+                self.isTextFieldFocused = true
+                self.offsetValue = height
         }
         
         NotificationCenter.default.addObserver(
-        forName: UIResponder.keyboardWillHideNotification,
-        object: nil,
-        queue: .main) { _ in
-            self.isTextFieldFocused = false
-            self.offsetValue = 0
+            forName: UIResponder.keyboardWillHideNotification,
+            object: nil,
+            queue: .main) { _ in
+                self.isTextFieldFocused = false
+                self.offsetValue = 0
         }
     }
     
@@ -155,6 +156,20 @@ struct AddPressureView: View {
                     Spacer()
                     
                     Button(action: {
+                        let iscorrectHighPressure = Helper.instance.checkTextField(text: self.highPressure,
+                                                                                   minValue: Constants.PressureLimits.minValue,
+                                                                                   maxValue: Constants.PressureLimits.maxHigh)
+                        let iscorrectLowPressure = Helper.instance.checkTextField(text: self.lowPressure,
+                                                                                  minValue: Constants.PressureLimits.minValue,
+                                                                                  maxValue: Constants.PressureLimits.maxHigh)
+                        let iscorrectPulse = Helper.instance.checkTextField(text: self.pulse,
+                                                                                    minValue: Constants.PressureLimits.minValue,
+                                                                                    maxValue: Constants.PressureLimits.maxPulse)
+                        guard iscorrectHighPressure, iscorrectLowPressure, iscorrectPulse else {
+                            self.showAlert.toggle()
+                            return
+                        }
+                        
                         let newPressure = Pressure(context: self.managedObjectContext)
                         newPressure.high = self.highPressure
                         newPressure.low = self.lowPressure
@@ -175,6 +190,9 @@ struct AddPressureView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     .shadow(color: Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
                     .padding(.bottom, 16)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Ошибка ввода"), message: Text("Пожалуйста, введите корректные значения!"), dismissButton: .default(Text("OK")))
+                    }
                 }
                 .offset(y: -self.offsetValue)
                 .animation(.spring())

@@ -56,7 +56,7 @@ struct DashboardBloodPressureCard: View {
                 .padding(.horizontal, 32)
             }
         .padding(.horizontal, 16)
-        .frame(width: 300, height: 180)
+        .frame(width: 340, height: 190)
         .background(Color.white)
         .cornerRadius(30)
         .modifier(ShadowModifier())

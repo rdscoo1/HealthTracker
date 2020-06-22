@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ChartsView: View {
     @FetchRequest(fetchRequest: Pressure.getAllPressureItems()) var pressureItems: FetchedResults<Pressure>
+    @Binding var isNavigationBarHidden: Bool
     
     func getHighPressure(items: FetchedResults<Pressure>) -> Array<Double> {
         var arr = [Double]()
@@ -30,24 +31,22 @@ struct ChartsView: View {
     }
     
     var body: some View {
-        ScrollView(.vertical) {
-            VStack(spacing: 164) {
-                LineView(data: getHighPressure(items: pressureItems), title: "Артериальное давление", legend: "Верхнее", valueSpecifier: "%.0f")
-                    .padding()
-                
-                Spacer()
-                
-                LineView(data: getLowPressure(items: pressureItems), title: "Артериальное давление", legend: "Нижнее", valueSpecifier: "%.0f")
-                    .padding()
-            }
-            .navigationBarTitle(Text("Графики"),displayMode: .inline)
+        VStack(spacing: 164) {
+            LineView(data: getHighPressure(items: pressureItems), title: "Артериальное давление", legend: "Верхнее", valueSpecifier: "%.0f")
+                .padding()
+            
+            Spacer()
+        }
+        .navigationBarTitle(Text("Графики"),displayMode: .inline)
+        .onAppear {
+            self.isNavigationBarHidden = true
         }
     }
 }
 
 struct ChartsView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartsView()
+        ChartsView(isNavigationBarHidden: .constant(true))
     }
 }
 

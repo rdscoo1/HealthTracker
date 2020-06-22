@@ -16,6 +16,7 @@ struct LoginView: View {
     @State var alertMessage = LocalizedStringKey("Something went wrong")
     @State var isLoading = false
     @State var isSuccess = false
+    @State var showContentView = false
     
     func login() {
         self.hideKeyboard()
@@ -30,6 +31,7 @@ struct LoginView: View {
                 self.email = ""
                 self.password = ""
                 self.isSuccess = false
+                UserDefaults.standard.set(true, forKey: "isLogged")
             }
         }
     }
@@ -39,103 +41,124 @@ struct LoginView: View {
     }
     
     var body: some View {
-        ZStack {
-            ZStack(alignment: .top) {
-                Color("background")
+        NavigationView {
+            ZStack {
+                ZStack(alignment: .top) {
+                    Color("background")
+                        .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                        .edgesIgnoringSafeArea(.bottom)
+                    
+                    CoverView()
+                    
+                    VStack {
+                        NavigationLink(destination: ContentView(), isActive: self.$showContentView) {
+                             EmptyView()
+                         }
+                        HStack {
+                            Image(systemName: "person.crop.circle.fill")
+                                .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
+                                .frame(width: 44, height: 44)
+                                .background(Color.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+                                .padding(.leading)
+                            
+                            TextField("Your Email", text: $email)
+                                .keyboardType(.emailAddress)
+                                .font(.subheadline)
+                                .padding(.leading)
+                                .frame(height: 44)
+                                .onTapGesture {
+                                    self.isTextFieldFocused = true
+                            }
+                        }
+                        
+                        Divider()
+                            .padding(.leading, 80)
+                        
+                        HStack {
+                            Image(systemName: "lock.fill")
+                                .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
+                                .frame(width: 44, height: 44)
+                                .background(Color.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                                .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
+                                .padding(.leading)
+                            
+                            
+                            SecureField(LocalizedStringKey("Password"), text: $password)
+                                .keyboardType(.default)
+                                .font(.subheadline)
+                                .padding(.leading)
+                                .frame(height: 44)
+                                .onTapGesture {
+                                    self.isTextFieldFocused = true
+                            }
+                        }
+                    }
+                    .frame(height: 136)
+                    .frame(maxWidth: .infinity)
+                    .background(BlurView(style: .systemMaterial))
                     .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                    .edgesIgnoringSafeArea(.bottom)
-                
-                CoverView()
-                
-                VStack {
-                    HStack {
-                        Image(systemName: "person.crop.circle.fill")
-                            .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
-                            .frame(width: 44, height: 44)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                            .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
-                            .padding(.leading)
-                        
-                        TextField("Your Email", text: $email)
-                            .keyboardType(.emailAddress)
-                            .font(.subheadline)
-                            .padding(.leading)
-                            .frame(height: 44)
-                            .onTapGesture {
-                                self.isTextFieldFocused = true
-                        }
-                    }
-                    
-                    Divider()
-                        .padding(.leading, 80)
+                    .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 20)
+                    .padding(.horizontal)
+                    .offset(y: 460)
                     
                     HStack {
-                        Image(systemName: "lock.fill")
-                            .foregroundColor(Color(#colorLiteral(red: 0.6549019608, green: 0.7137254902, blue: 0.862745098, alpha: 1)))
-                            .frame(width: 44, height: 44)
-                            .background(Color.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
-                            .shadow(color: Color.black.opacity(0.15), radius: 5, x: 0, y: 5)
-                            .padding(.leading)
-                        
-                        
-                        SecureField(LocalizedStringKey("Password"), text: $password)
-                            .keyboardType(.default)
+                        Text(LocalizedStringKey("Forgot password?"))
                             .font(.subheadline)
-                            .padding(.leading)
-                            .frame(height: 44)
-                            .onTapGesture {
-                                self.isTextFieldFocused = true
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            self.hideKeyboard()
+                            self.isTextFieldFocused = false
+                            self.isLoading = true
+                            
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                                self.isLoading = false
+                                self.isSuccess = true
+                                
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                                    self.email = ""
+                                    self.password = ""
+                                    self.isSuccess = false
+                                    self.showContentView = true
+                                }
+                            }
+                        }) {
+                            Text(LocalizedStringKey("Log in"))
+                                .foregroundColor(.black)
+                        }
+                        .padding(12)
+                        .padding(.horizontal, 30)
+                        .background(Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)))
+                        .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
+                        .shadow(color: Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
+                        .alert(isPresented: $showAlert) {
+                            Alert(title: Text("Error"), message: Text(self.alertMessage), dismissButton: .default(Text("OK")))
                         }
                     }
-                }
-                .frame(height: 136)
-                .frame(maxWidth: .infinity)
-                .background(BlurView(style: .systemMaterial))
-                .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
-                .shadow(color: Color.black.opacity(0.15), radius: 20, x: 0, y: 20)
-                .padding(.horizontal)
-                .offset(y: 460)
-                
-                HStack {
-                    Text(LocalizedStringKey("Forgot password?"))
-                        .font(.subheadline)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
+                    .padding()
                     
-                    Spacer()
-                    
-                    Button(action: {
-                        self.login()
-                    }) {
-                        Text(LocalizedStringKey("Log in"))
-                            .foregroundColor(.black)
-                    }
-                    .padding(12)
-                    .padding(.horizontal, 30)
-                    .background(Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)))
-                    .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
-                    .shadow(color: Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
-                    .alert(isPresented: $showAlert) {
-                        Alert(title: Text("Error"), message: Text(self.alertMessage), dismissButton: .default(Text("OK")))
-                    }
                 }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
-                .padding()
+                .offset(y: isTextFieldFocused ? -300 : 0)
+                .animation(isTextFieldFocused ? .easeInOut : nil)
+                .onTapGesture {
+                    self.isTextFieldFocused = false
+                    self.hideKeyboard()
+                }
                 
+                if isLoading {
+                    LoadingView()
+                }
+                if isSuccess {
+                    SuccessView()
+                }
             }
-            .offset(y: isTextFieldFocused ? -300 : 0)
-            .animation(isTextFieldFocused ? .easeInOut : nil)
-            .onTapGesture {
-                self.isTextFieldFocused = false
-                self.hideKeyboard()
-            }
-            
-            if isLoading {
-                LoadingView()
-            }
-            if isSuccess {
-                SuccessView()
-            }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
 }

@@ -15,6 +15,7 @@ struct AddAnalysisView: View {
     
     @State var isTextFieldFocused = false
     @State var offsetValue: CGFloat = 0
+    @State var showAlert = false
     
     @State var glucose: String = ""
     @State var cholesterol: String = ""
@@ -64,7 +65,7 @@ struct AddAnalysisView: View {
                             
                             Spacer()
                             
-                            TextField("10", text: self.$glucose)
+                            TextField("0", text: self.$glucose)
                                 .font(.system(size: 20, weight: .medium))
                                 .multilineTextAlignment(.center)
                                 .frame(height: 44)
@@ -94,7 +95,7 @@ struct AddAnalysisView: View {
                             
                             Spacer()
                             
-                            TextField("2", text: self.$hemoglobin)
+                            TextField("0", text: self.$hemoglobin)
                                 .font(.system(size: 20, weight: .medium))
                                 .multilineTextAlignment(.center)
                                 .frame(height: 44)
@@ -125,7 +126,7 @@ struct AddAnalysisView: View {
                             
                             Spacer()
                             
-                            TextField("2", text: self.$cholesterol)
+                            TextField("0", text: self.$cholesterol)
                                 .font(.system(size: 20, weight: .medium))
                                 .multilineTextAlignment(.center)
                                 .frame(height: 44)
@@ -155,21 +156,30 @@ struct AddAnalysisView: View {
                     Spacer()
                     
                     Button(action: {
-                        if !self.glucose.isEmpty || !self.hemoglobin.isEmpty || !self.cholesterol.isEmpty {
-                            let newAnalysis = Analysis(context: self.managedObjectContext)
-                            newAnalysis.glucose = self.glucose
-                            newAnalysis.hemoglobin = self.hemoglobin
-                            newAnalysis.cholesterol = self.cholesterol
-                            newAnalysis.createdAt = Date()
-                            print("Новый замер: ", newAnalysis)
-                            
-                            try? self.managedObjectContext.save()
-                            
-                            self.presentationMode.wrappedValue.dismiss()
-                        } else {
-                            print("fuck")
+                        let iscorrectGlucose = Helper.instance.checkTextField(text: self.glucose,
+                                                                              minValue: Constants.AnalysisLimit.minValue,
+                                                                              maxValue: Constants.AnalysisLimit.maxDefault)
+                        let iscorrectHemoglobin = Helper.instance.checkTextField(text: self.hemoglobin,
+                                                                                 minValue: Constants.AnalysisLimit.minValue,
+                                                                                 maxValue: Constants.AnalysisLimit.maxDefault)
+                        let iscorrectCholesterol = Helper.instance.checkTextField(text: self.cholesterol,
+                                                                                  minValue: Constants.AnalysisLimit.minValue,
+                                                                                  maxValue: Constants.AnalysisLimit.maxDefault)
+                        guard iscorrectGlucose, iscorrectHemoglobin, iscorrectCholesterol else {
+                            self.showAlert.toggle()
+                            return
                         }
                         
+                        let newAnalysis = Analysis(context: self.managedObjectContext)
+                        newAnalysis.glucose = self.glucose
+                        newAnalysis.hemoglobin = self.hemoglobin
+                        newAnalysis.cholesterol = self.cholesterol
+                        newAnalysis.createdAt = Date()
+                        print("Новый замер: ", newAnalysis)
+                        
+                        try? self.managedObjectContext.save()
+                        
+                        self.presentationMode.wrappedValue.dismiss()
                     }) {
                         Text("Сохранить")
                             .foregroundColor(.white)
@@ -180,6 +190,9 @@ struct AddAnalysisView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
                     .shadow(color: Color(#colorLiteral(red: 0.9055276113, green: 0.1088131421, blue: 0.04684824486, alpha: 1)).opacity(0.3), radius: 20, x: 0, y: 20)
                     .padding(.bottom, 16)
+                    .alert(isPresented: $showAlert) {
+                        Alert(title: Text("Ошибка ввода"), message: Text("Пожалуйста, введите корректные значения!"), dismissButton: .default(Text("OK")))
+                    }
                 }
                 .offset(y: -self.offsetValue)
                 .animation(.spring())

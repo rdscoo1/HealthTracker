@@ -18,6 +18,8 @@
 		E867BC3C2495C1B300F098D5 /* BloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867BC3B2495C1B300F098D5 /* BloodPressureCard.swift */; };
 		E867BC3F2495C63800F098D5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E867BC3E2495C63800F098D5 /* DateExtension.swift */; };
 		E8713D2924879DE700F9A62D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8713D2B24879DE700F9A62D /* Localizable.strings */; };
+		E88B65282497CC75000B1E55 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B65272497CC75000B1E55 /* Constants.swift */; };
+		E88B652A2497CD45000B1E55 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88B65292497CD45000B1E55 /* Helper.swift */; };
 		E8A1389024873F870049265A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A1388F24873F870049265A /* GoogleService-Info.plist */; };
 		E8A13893248744D50049265A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E8A13892248744D50049265A /* Lottie */; };
 		E8A138952487484E0049265A /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A138942487484E0049265A /* UserStore.swift */; };
@@ -28,13 +30,16 @@
 		E8A4466A24906C8100D3827F /* CoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A4466924906C8100D3827F /* CoreDataService.swift */; };
 		E8A446742491467F00D3827F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A446732491467F00D3827F /* ContentView.swift */; };
 		E8A44676249146E800D3827F /* MeasurementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A44675249146E800D3827F /* MeasurementView.swift */; };
+		E8B378382497E886004D40FA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B378372497E886004D40FA /* ProfileView.swift */; };
+		E8B3783A24982954004D40FA /* ArticleVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3783924982954004D40FA /* ArticleVIew.swift */; };
+		E8B3783D24983B13004D40FA /* ArticleDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3783C24983B13004D40FA /* ArticleDetail.swift */; };
+		E8B3783F24984E00004D40FA /* ArticleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B3783E24984E00004D40FA /* ArticleStore.swift */; };
 		E8BDCBB5248797F900A0E1E4 /* healthreport.json in Resources */ = {isa = PBXBuildFile; fileRef = E8BDCBB4248797F900A0E1E4 /* healthreport.json */; };
 		E8C6E7C92491B02500BBBFEE /* Analysis.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7C82491B02500BBBFEE /* Analysis.swift */; };
 		E8C6E7CB2491B9C100BBBFEE /* AddAnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */; };
 		E8C6E7CD2491BA1700BBBFEE /* AnalysisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */; };
 		E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1B2487008D00376261 /* Modifiers.swift */; };
 		E8ED9B1E2487024B00376261 /* DashboardBloodPressureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1D2487024B00376261 /* DashboardBloodPressureCard.swift */; };
-		E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B1F24870F3A00376261 /* DefaultCard.swift */; };
 		E8ED9B2224871CE400376261 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B2124871CE400376261 /* LoginView.swift */; };
 		E8ED9B242487257100376261 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B232487257100376261 /* BlurView.swift */; };
 		E8ED9B2E24872F9F00376261 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8ED9B2D24872F9F00376261 /* LottieView.swift */; };
@@ -78,6 +83,8 @@
 		E8713D2824879DB800F9A62D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E8713D2A24879DE700F9A62D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E8713D2C24879ED100F9A62D /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E88B65272497CC75000B1E55 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E88B65292497CD45000B1E55 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E8A1388F24873F870049265A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8A138942487484E0049265A /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		E8A1389624874D1C0049265A /* medical.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medical.json; sourceTree = "<group>"; };
@@ -87,13 +94,16 @@
 		E8A4466924906C8100D3827F /* CoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataService.swift; sourceTree = "<group>"; };
 		E8A446732491467F00D3827F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E8A44675249146E800D3827F /* MeasurementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementView.swift; sourceTree = "<group>"; };
+		E8B378372497E886004D40FA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		E8B3783924982954004D40FA /* ArticleVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleVIew.swift; sourceTree = "<group>"; };
+		E8B3783C24983B13004D40FA /* ArticleDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetail.swift; sourceTree = "<group>"; };
+		E8B3783E24984E00004D40FA /* ArticleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleStore.swift; sourceTree = "<group>"; };
 		E8BDCBB4248797F900A0E1E4 /* healthreport.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = healthreport.json; sourceTree = "<group>"; };
 		E8C6E7C82491B02500BBBFEE /* Analysis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analysis.swift; sourceTree = "<group>"; };
 		E8C6E7CA2491B9C100BBBFEE /* AddAnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAnalysisView.swift; sourceTree = "<group>"; };
 		E8C6E7CC2491BA1700BBBFEE /* AnalysisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalysisView.swift; sourceTree = "<group>"; };
 		E8ED9B1B2487008D00376261 /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		E8ED9B1D2487024B00376261 /* DashboardBloodPressureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardBloodPressureCard.swift; sourceTree = "<group>"; };
-		E8ED9B1F24870F3A00376261 /* DefaultCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCard.swift; sourceTree = "<group>"; };
 		E8ED9B2124871CE400376261 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E8ED9B232487257100376261 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		E8ED9B2D24872F9F00376261 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -185,7 +195,6 @@
 			isa = PBXGroup;
 			children = (
 				E8ED9B1D2487024B00376261 /* DashboardBloodPressureCard.swift */,
-				E8ED9B1F24870F3A00376261 /* DefaultCard.swift */,
 				E8ED9B2F248730E300376261 /* LoadingView.swift */,
 				E8ED9B332487350A00376261 /* SuccessView.swift */,
 				E81EC12D2491BC6A0036467B /* AnalysisCard.swift */,
@@ -224,9 +233,29 @@
 			path = Utilities/CoreData;
 			sourceTree = "<group>";
 		};
+		E8B378362497E878004D40FA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				E8B378372497E886004D40FA /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E8B3783B24983B01004D40FA /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				E8B3783924982954004D40FA /* ArticleVIew.swift */,
+				E8B3783C24983B13004D40FA /* ArticleDetail.swift */,
+				E8B3783E24984E00004D40FA /* ArticleStore.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
 		E8C6E7CF2491BA9000BBBFEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E8B3783B24983B01004D40FA /* Article */,
+				E8B378362497E878004D40FA /* Profile */,
 				E82150C82496AA9C000B1311 /* Login */,
 				E8C6E7D02491BAA400BBBFEE /* Analysis */,
 				E867BC332495ACA600F098D5 /* Pressure */,
@@ -260,6 +289,8 @@
 				E8ED9B232487257100376261 /* BlurView.swift */,
 				E8ED9B2D24872F9F00376261 /* LottieView.swift */,
 				E8713D2B24879DE700F9A62D /* Localizable.strings */,
+				E88B65272497CC75000B1E55 /* Constants.swift */,
+				E88B65292497CD45000B1E55 /* Helper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -417,8 +448,9 @@
 				E8ED9B2224871CE400376261 /* LoginView.swift in Sources */,
 				E8EEB5A52495D96000D83E0F /* ChartsView.swift in Sources */,
 				E8EEB5BD2495F05000D83E0F /* BarChartRow.swift in Sources */,
-				E8ED9B2024870F3A00376261 /* DefaultCard.swift in Sources */,
 				E8EEB5C62495F05000D83E0F /* MultiLineChartView.swift in Sources */,
+				E8B3783D24983B13004D40FA /* ArticleDetail.swift in Sources */,
+				E88B652A2497CD45000B1E55 /* Helper.swift in Sources */,
 				E867BC352495ACCD00F098D5 /* PressureView.swift in Sources */,
 				E8EEB5C52495F05000D83E0F /* Path+QuadCurve.swift in Sources */,
 				E8EEB5C82495F05000D83E0F /* Helpers.swift in Sources */,
@@ -429,6 +461,8 @@
 				E8A44676249146E800D3827F /* MeasurementView.swift in Sources */,
 				E81EC12E2491BC6A0036467B /* AnalysisCard.swift in Sources */,
 				E8EEB5C22495F05000D83E0F /* Legend.swift in Sources */,
+				E8B3783A24982954004D40FA /* ArticleVIew.swift in Sources */,
+				E88B65282497CC75000B1E55 /* Constants.swift in Sources */,
 				E8EEB5BF2495F05000D83E0F /* BarChartCell.swift in Sources */,
 				E8A446742491467F00D3827F /* ContentView.swift in Sources */,
 				E8EEB5CB2495F05000D83E0F /* PieChartView.swift in Sources */,
@@ -444,10 +478,12 @@
 				E8ED9B1C2487008D00376261 /* Modifiers.swift in Sources */,
 				E8EEB5BE2495F05000D83E0F /* LabelView.swift in Sources */,
 				E8C6E7CD2491BA1700BBBFEE /* AnalysisView.swift in Sources */,
+				E8B378382497E886004D40FA /* ProfileView.swift in Sources */,
 				E8EEB5C32495F05000D83E0F /* LineChartView.swift in Sources */,
 				E8EEB5C12495F05000D83E0F /* LineView.swift in Sources */,
 				E8A446652490645C00D3827F /* AppModel.xcdatamodeld in Sources */,
 				E867BC3C2495C1B300F098D5 /* BloodPressureCard.swift in Sources */,
+				E8B3783F24984E00004D40FA /* ArticleStore.swift in Sources */,
 				E8EEB5C02495F05000D83E0F /* IndicatorPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

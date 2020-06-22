@@ -12,7 +12,6 @@ struct MeasurementView: View {
     @State var picker = 0
     
     var body: some View {
-        NavigationView {
             VStack {
                     Picker(selection: self.$picker,
                            label: Text("")) {
@@ -30,8 +29,9 @@ struct MeasurementView: View {
                         AnalysisView()
                     }
             }
-            .navigationBarTitle(Text("Замеры"), displayMode: .inline)
-        }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
+//            .navigationBarTitle(Text("Замеры"), displayMode: .inline)
     }
 }
 

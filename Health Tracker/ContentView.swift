@@ -10,16 +10,18 @@ import SwiftUI
 
 
 struct ContentView: View {
-     let managedObjectContext = CoreDataService.instance.persistentContainer.viewContext
+    let managedObjectContext = CoreDataService.instance.persistentContainer.viewContext
+    var article = ArticleStore()
     
     var body: some View {
         TabView {
-            DashboardView()
+            DashboardView(showProfile: false, active: true, activeIndex: -1)
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("Главная")
             }
             .environment(\.managedObjectContext, managedObjectContext)
+            .environmentObject(article)
             
             MeasurementView()
                 .tabItem {
@@ -28,7 +30,7 @@ struct ContentView: View {
             }
             .environment(\.managedObjectContext, managedObjectContext)
             
-            ChartsView()
+            ProfileView()
                 .tabItem {
                     Image(systemName: "person.crop.circle")
                     Text("Профиль")
