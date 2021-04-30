@@ -143,7 +143,7 @@ struct LoginView: View {
                     .padding()
                     
                 }
-                .offset(y: isTextFieldFocused ? -300 : 0)
+//                .offset(y: isTextFieldFocused ? -300 : 0)
                 .animation(isTextFieldFocused ? .easeInOut : nil)
                 .onTapGesture {
                     self.isTextFieldFocused = false

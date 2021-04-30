@@ -113,7 +113,6 @@ struct HistoryHeader: View {
                 Divider()
                     .padding(.bottom, 4)
             }
-            .background(Color.white)
         }
     }
 }
@@ -129,7 +128,6 @@ struct FirstMeasurementHeader: View {
                 Divider()
                     .padding(.bottom, 4)
             }
-            .background(Color.white)
         }
     }
 }
